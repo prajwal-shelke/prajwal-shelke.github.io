@@ -1,0 +1,104 @@
+/* PHONE CSS  */
+
+/* NAVBAR */
+
+#navbar{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar ul li a{
+    font-size: 1rem;
+    padding: 0px 7px;
+}
+
+
+#navbar ul{
+   padding: 0px 20px;
+}
+
+/* HOME */
+
+#home{
+    height: 322px;
+    padding: 2px 20px;
+}
+
+#home::before{
+    height: 553px;
+}
+
+#home p{
+    font-size: 0.85rem;
+}
+
+/* SERVICES */
+
+
+#services{
+    flex-direction: column;
+}
+
+#services .box{
+    padding: 10px;
+    margin: 15px;
+}
+
+.box img{
+    width: 107px;
+    height: 84px;
+    padding: 2px 10px;
+}
+
+/* CLIENT */
+
+#clients h3{
+    margin-top: 0.75rem;
+    margin-bottom: 4.7rem;
+}
+
+.client-items img{
+    width: 56px;
+    height: auto;
+    padding: 2px 10px;
+}
+
+
+/* CONTACT */
+
+#contact-us{
+    width: 300px;
+    margin-top: 80px;
+}
+
+#contact-us::before{
+    width: 300px;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top: 71px;
+}
+
+/* UTILITY */
+
+.h-tag{
+    font-size: 1.8rem;
+    margin-top: 3.6em;
+}
+
+.contact-us h3{
+    margin-top: 1.7rem;
+}
+
+.h-secondary{
+    font-size: 1.3rem;
+    margin: 3px 7px;
+}
+
+.p-secondary{
+    font-size: 0.9rem;
+    margin: 3px 7px;
+}
