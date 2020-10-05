@@ -1,0 +1,54 @@
+/* NAVBAR */
+#navbar{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar ul li a{
+    margin: 5px 11px;
+}
+
+#navbar input {
+    margin-left: 40px;
+}
+
+#navbar input{
+    margin: 7px 0px;
+}
+
+#navbar #login-signup{
+    margin: 15px 0px;
+    margin-bottom: 25px;
+}
+/* HOME */
+
+#home{
+    padding: 10px;
+}
+
+#home h3{
+    margin-top: 20px;
+    font-size: 2.1rem;
+ }
+
+ #home p{
+     text-align: center;
+     font-size: 1rem;
+ }
+
+/* BUYSELL */
+/* TYPES */
+/* ABOUT */
+
+#about{
+    padding: 30px;
+}
+
+/* CONTACT */
+
+#contact{
+    flex-wrap: wrap;
+}
+
+/* FOOTER */

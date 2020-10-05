@@ -1,0 +1,41 @@
+/* NAVBAR */
+
+#navbar ul li a{
+    padding: 5px 13px;
+ }
+
+ #navbar input{
+     margin-left: 36px;
+ }
+ 
+#navbar #login-signup .btn{
+    padding: 5px 13px;
+}
+
+#navbar #login-signup{
+    margin-left: 20px;
+}
+
+#navbar ul {
+    padding-left: 0px;
+}
+/* HOME */
+
+/* BUYSELL */
+
+/* TYPES */
+
+#types .cardHolder {
+    flex-wrap: wrap;
+}
+
+/* ABOUT */
+
+/* CONTACT */
+
+#contact a {
+    margin: 5px 13px;
+    padding: 5px 13px;
+}
+
+/* FOOTER */

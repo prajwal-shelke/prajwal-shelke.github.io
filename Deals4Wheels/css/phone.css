@@ -1,0 +1,88 @@
+/* NAVBAR */
+
+#navbar ul li a{
+    font-size: 0.7rem;
+    margin: 5px 7px;
+}
+
+#navbar #login-signup .btn {
+    font-size: 0.7rem;
+}
+/* HOME */
+
+#home h3 {
+    margin-top: 10px;
+    font-size: 1.6rem;
+}
+
+#home p {
+    font-size: 0.8rem;
+    padding: 2px 17px;
+}
+
+/* BUYSELL */
+
+#buysell {
+    flex-direction: column;
+}
+
+#buysell #buy{
+    padding: 3px;
+    width: 98%;
+}
+
+#buysell #sell{
+    padding: 3px;
+    width: 98%;
+    margin-top: 1px;
+}
+
+.buysellp {
+    font-size: 0.7rem;
+    padding: 2px 7px;
+}
+
+.buysellh3 {
+    font-size: 1.3rem;
+}
+
+#buysell .buysellbtn {
+    font-size: 1rem;
+}
+
+/* TYPES */
+/* ABOUT */
+
+#about {
+    padding: 13px;
+}
+
+#about h3 {
+    font-size: 1.3rem;
+}
+
+#about p {
+    font-size: 0.7rem;
+}
+
+/* CONTACT */
+
+#contact{
+    height: auto;
+    flex-direction: row;
+}
+
+#contact a{
+    font-size: 0.7rem;
+}
+
+#contact a {
+    margin: 7px 7px;
+    padding: 5px 7px;
+}
+
+/* FOOTER */
+
+footer{
+    font-size: 0.5rem;
+}

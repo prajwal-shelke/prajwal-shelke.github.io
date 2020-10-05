@@ -1,0 +1,302 @@
+/* CSS RESET */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Baloo Bhai 2', cursive;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* ANIMATION */
+
+/* .fadein{
+    animation: fade-in 1.2s;
+}
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+} */
+
+
+/* NAVBAR */
+
+#navbar{
+    display: flex;
+    border: 2px solid white;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+}
+
+#navbar #logo{
+    border: 2px solid orangered;
+    border-radius: 12px;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin: 6px 50px;
+    padding: 10px 10px;
+    width: 103px;
+    height: auto;
+}
+
+#navbar ul{
+    display: flex;
+    list-style: none;
+    margin-top: 23px;
+}
+
+#navbar ul li a{
+    border: 2px solid black;
+   text-decoration: none;
+   margin-left: 13px;
+   padding: 5px 13px;
+   color:white;
+}
+
+#navbar ul li a:hover{
+    border: 2px solid white;
+    border-radius: 21px;
+    box-shadow: 2px 2px 13px 1px rgb(199, 199, 199);
+    cursor: pointer;
+ }
+
+#navbar input{
+    margin-top: 18px;
+    margin-bottom: 14px;
+    margin-left: 360px;
+     padding: 5px 13px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+#navbar input:hover{
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 13px 1px rgb(199, 199, 199);
+    cursor: pointer;
+ }
+
+#navbar input::placeholder{
+    font-family: 'Baloo Bhai 2', cursive;
+    color: black;
+}
+
+#navbar #login-signup{
+    margin-top: 23px;
+    margin-left: 20px;
+}
+
+#navbar #login-signup .btn{
+    border: 2px solid black;
+    margin: 3px 5px;
+    text-decoration: none;
+    color: white;
+    padding: 5px 13px;
+}
+
+#navbar #login-signup .btn:hover{
+    border: 2px solid white;
+    border-radius: 21px;
+    box-shadow: 2px 2px 13px 1px rgb(199, 199, 199);
+    cursor: pointer;
+ }
+
+ /* HOME */
+
+ #home{
+    display: flex;
+    flex-direction: column;
+    color: #c6c6c6;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(white -242%, black);
+    height: 471px;
+    padding: 20px;
+ }
+
+ #home h3{
+    margin-top: 40px;
+    font-size: 2.3rem;
+ }
+
+ #home p{
+     text-align: center;
+     font-size: 1.1rem;
+ }
+
+ /* BUY-SELL */
+
+ #buysell{
+     display: flex;
+     flex-direction: row;
+     margin-top: 1px;
+ }
+
+ #buysell #buy{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     margin-right: 1px;
+     width: 50%;
+     padding: 2px 50px;
+     color: white;
+     background-color: rgb(27, 27, 27);
+ }
+
+ #buysell #sell{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2px 50px;
+    width: 50%;
+    color: white;
+    background-color: rgb(27, 27, 27);;
+}
+
+.buysellh3{
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.buysellp{
+    font-size: 1rem;
+}
+
+#buysell .buysellbtn{
+    background-color: black;
+    color: white;
+    border: 2px solid rgb(201, 201, 201);
+    border-radius: 5px;
+    padding: 3px 20px;
+    font-size: 1.3rem;
+    margin-bottom: 17px;
+}
+
+#buysell .buysellbtn:hover{
+    box-shadow: 2px 2px 13px 1px rgb(199, 199, 199);
+    cursor: pointer;
+}
+
+/* TYPES */
+
+#types{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 46px;
+}
+
+#types-head{
+    margin-top: 27px;
+    font-size: 2rem;
+}
+
+#types .cardHolder{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#types .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 13px;
+    margin: 13px 23px;
+    padding: 2px 20px;
+}
+
+#types .card:hover{
+    box-shadow: 2px 2px 13px 1px rgb(167, 167, 167);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#types .card img{
+    height: auto;
+    width: 180px;
+}
+
+.card-head{
+    font-size: 1.1rem;
+    padding: 3px 20px;
+}
+
+/* ABOUT */
+
+#about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px 204px;
+    background-image:  radial-gradient(white -209%, black);
+    color: #c6c6c6;
+}
+
+#about h3{
+    font-size: 1.7rem;
+    margin-bottom: 13px;
+}
+
+#about p{
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+
+/* CONTACT US */
+
+#contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 120px;
+}
+
+#contact a{
+    margin: 3px 33px;
+    padding: 3px 23px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid white;
+}
+
+#contact a:hover{
+    text-decoration: underline;
+    box-shadow: 2px 2px 13px 1px rgb(167, 167, 167);
+    border: 2px solid black;
+    border-radius: 7px;
+    background-color: rgb(245, 245, 245);
+}
+
+/* FOOTER */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   background-color: rgb(27, 27, 27);
+   color: #c6c6c6;
+}
