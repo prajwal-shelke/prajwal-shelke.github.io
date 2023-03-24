@@ -1,0 +1,217 @@
+:root {
+  --bgColor: rgb(0, 0, 0);
+  --a1Color: 33, 150, 243;
+  --a2Color: 47, 33, 240;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background-color: var(--bgColor);
+}
+
+.card {
+  display: flex;
+  position: relative;
+  width: 300px;
+  aspect-ratio: 10/16;
+  border: 3px solid rgb(var(--a1Color), 0.5);
+  background: rgb(var(--a1Color), 0.1);
+  border-radius: 1em;
+  overflow: hidden;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    aspect-ratio: 10/16;
+    border: 1px solid rgb(var(--a1Color), 0.5);
+    background: rgb(var(--a1Color), 0.1);
+    border-radius: 0em;
+    overflow: hidden;
+    z-index: 10;
+  }
+  #blob {
+    display: none !important;
+  }
+}
+
+.screen-overlay {
+  background: linear-gradient(
+    rgba(var(--a1Color), 0.3),
+    rgba(var(--a1Color), 0.3) 3px,
+    transparent 3px,
+    transparent 9px
+  );
+  background-size: 100% 9px;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  animation: pan-overlay 22s infinite linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.screen-image {
+  background-image: url("https://images.unsplash.com/photo-1515266591878-f93e32bc5937?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=100");
+  height: 100%;
+  width: 100%;
+  background-size: 500%;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  filter: contrast(100%) sepia(100%) hue-rotate(160deg);
+  animation: pan-image 15s linear infinite;
+  position: absolute;
+  z-index: 1;
+}
+
+.screen-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  position: relative;
+  flex-grow: 1;
+  z-index: 3;
+  margin: 1em;
+  background-color: transparent;
+  border: 1px solid rgb(var(--a1Color), 0.5);
+  border-radius: 1em;
+  font-family: "Source Code Pro", monospace;
+}
+
+.screen-content img {
+  width: 100px;
+  background: transparent;
+  text-shadow: 0px 0px 20px #ffffff;
+  filter: drop-shadow(0px 0px 10px #ffffff);
+}
+
+.inverse-image {
+  rotate: 180deg;
+}
+
+.screen-content .heading {
+  background: transparent;
+  color: #ffffff;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: underline;
+  text-shadow: 0px 0px 20px #ffffff;
+}
+
+#blob {
+  display: block;
+  background: #ffffff;
+  height: 24vmax;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(rgb(var(--a1Color)), rgb(var(--a2Color)));
+  animation: rotate 20s infinite;
+  opacity: 1;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  /* z-index: 2; */
+  backdrop-filter: blur(12vmax);
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1 1.5;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes pan-overlay {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 0 -100%;
+  }
+}
+
+@keyframes pan-image {
+  0% {
+    background-position: 50% 15%;
+    background-size: 300%;
+  }
+
+  20% {
+    background-position: 70% 0%;
+    background-size: 300%;
+  }
+
+  20.000001% {
+    background-position: 30% 50%;
+    background-size: 250%;
+  }
+
+  40% {
+    background-position: 50% 50%;
+    background-size: 250%;
+  }
+
+  40.000001% {
+    background-position: 10% 30%;
+    background-size: 300%;
+  }
+
+  60% {
+    background-position: 10% 70%;
+    background-size: 300%;
+  }
+
+  60.000001% {
+    background-position: 35% 30%;
+    background-size: 200%;
+  }
+
+  80% {
+    background-position: 70% 30%;
+    background-size: 200%;
+  }
+
+  80.000001% {
+    background-position: 80% 70%;
+    background-size: 200%;
+  }
+
+  100% {
+    background-position: 30% 30%;
+    background-size: 200%;
+  }
+}
