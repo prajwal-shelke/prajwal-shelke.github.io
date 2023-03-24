@@ -1,0 +1,46 @@
+:root {
+  --bgColor: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bgColor);
+  overflow: hidden;
+}
+
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+#image-track .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% 50%;
+}
+
+#image-track .link {
+  text-decoration: underline;
+  color: #fff;
+  text-shadow: 0 0 10px #fff;
+  font-family: "Source Code Pro", monospace;
+  font-size: 3em;
+  text-align: center;
+  vertical-align: center;
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  transform: translate(-50%, 10%);
+}
