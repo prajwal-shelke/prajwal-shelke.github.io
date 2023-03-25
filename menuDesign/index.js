@@ -14,5 +14,4 @@ setInterval(() => {
   const randomConfig = configArr[Math.floor(Math.random() * 7)];
   wrapper.dataset.configuration = randomConfig[0];
   wrapper.dataset.roundness = randomConfig[1];
-  console.log(wrapper.dataset.configuration, wrapper.dataset.roundness);
 }, 2500);
