@@ -33,11 +33,10 @@ body {
 #wrapper .shape {
   height: 30%;
   width: 30%;
-  background-color: rgba(213, 236, 83, 0.5);
   position: absolute;
   transition: left, top, height, width, border-radius;
-  transition-duration: 800ms;
-  transition-timing-function: ease-out;
+  transition-duration: 1000ms;
+  transition-timing-function: ease-in-out;
 }
 
 #wrapper .shape:nth-child(1) {
