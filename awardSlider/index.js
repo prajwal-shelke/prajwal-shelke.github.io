@@ -57,17 +57,16 @@ if (window.outerWidth < 800) {
       {
         transform: `translate(${newPercentage}%, -50%)`,
       },
-      { duration: 1300, fill: "forwards", easing: "linear" }
+      { duration: 1300, fill: "forwards", easing: "ease-in-out" }
     );
     for (const image of track.getElementsByClassName("image")) {
       image.animate(
         {
-          objectPosition: `${newPercentage + 100}% 50%`,
+          objectPosition: `${newPercentage + 99}% 50%`,
         },
-        { duration: 1200, fill: "forwards", easing: "linear" }
+        { duration: 1300, fill: "forwards", easing: "ease-in-out" }
       );
     }
-    console.log(newPercentage + 100);
   };
 
   window.ontouchend = () => {
