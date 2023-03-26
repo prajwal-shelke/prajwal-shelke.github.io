@@ -77,26 +77,32 @@ body {
 
 #wrapper .shape:nth-child(2) {
   background-color: var(--a2Color);
+  color: #000000;
 }
 
 #wrapper .shape:nth-child(3) {
   background-color: var(--a3Color);
+  color: #ffffff;
 }
 
 #wrapper .shape:nth-child(4) {
   background-color: var(--a4Color);
+  color: #000000;
 }
 
 #wrapper .shape:nth-child(5) {
   background-color: var(--a5Color);
+  color: #000000;
 }
 
 #wrapper .shape:nth-child(6) {
   background-color: var(--a6Color);
+  color: #000000;
 }
 
 #wrapper .shape:nth-child(7) {
   background-color: var(--a7Color);
+  color: #000000;
 }
 
 /* config-1 */
@@ -342,4 +348,9 @@ body {
 #wrapper .shape .content .header .title {
   flex-grow: 1;
   text-align: center;
+  font-weight: lighter;
+  text-shadow: 0 2px 1px #9a9a9a, -1px 3px 1px #9c9c9c;
+  /* blurred text */
+  /* color: transparent;
+  text-shadow: 0 0 3px #181818;    */
 }
