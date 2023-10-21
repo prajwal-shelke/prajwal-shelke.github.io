@@ -1,4 +1,4 @@
-* {
+:root {
   --a1Color: #56c143;
   --a2Color: #deea00;
   --a3Color: #000000;
@@ -16,9 +16,7 @@
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+  min-height: 100vh;
   background-color: rgb(248, 248, 248);
   display: flex;
   justify-content: center;
@@ -31,7 +29,7 @@ body {
   width: 90vmin;
   aspect-ratio: 1.618;
   transition: height, width;
-  transition-duration: 1200ms;
+  transition-duration: 800ms;
 }
 
 .shape .content {
@@ -66,7 +64,7 @@ body {
   position: absolute;
   cursor: pointer;
   transition: left, top, height, width, border-radius;
-  transition-duration: 1000ms;
+  transition-duration: 600ms;
   transition-timing-function: ease-in-out;
 }
 
@@ -82,7 +80,7 @@ body {
 
 #wrapper .shape:nth-child(3) {
   background-color: var(--a3Color);
-  color: #ffffff;
+  color: #000000;
 }
 
 #wrapper .shape:nth-child(4) {
@@ -316,10 +314,10 @@ body {
   z-index: 5;
 }
 
-#wrapper .shape:has("active") .content {
+#wrapper .shape.active .content {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100%;
   justify-content: flex-start;
   flex-direction: column;
   z-index: 11;
@@ -353,4 +351,94 @@ body {
   /* blurred text */
   /* color: transparent;
   text-shadow: 0 0 3px #181818;    */
+}
+
+#wrapper .shape .content .content-body {
+  /* color: #ffffff; */
+  padding: 0 1em 0 1em;
+  text-align: justify;
+  color: transparent;
+  text-shadow: 0 0 2px #181818;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* flicker effect on shape 3 */
+
+#wrapper .shape.active:nth-child(3) {
+  background: linear-gradient(rgb(140, 140, 140), black);
+  animation: flickerBg 3s 500ms linear 3;
+}
+
+
+#wrapper .shape .content .header .tubelight {
+  width: 70vw;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  height: 12px;
+  top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+  border: 1px solid #a0a0a0;
+  box-shadow: 0px 0px 3px rgb(255, 255, 255), 0px 10px 30px rgb(255, 255, 255),
+    0px 10px 50px rgb(255, 255, 255);
+  animation: flicker 3s 500ms linear 3;
+}
+
+@keyframes flickerBg {
+  20%,
+  21.999%,
+  22.001%,
+  29.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    background: linear-gradient(rgb(19, 19, 19), black);
+  }
+
+  0%,
+  19.999%,
+  22%,
+  30%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    background: linear-gradient(rgb(139, 139, 139), black);
+  }
+}
+
+@keyframes flicker {
+  20%,
+  21.999%,
+  22.001%,
+  29.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    box-shadow: none;
+    background-color: #2b2b2b;
+  }
+
+  0%,
+  19.999%,
+  22%,
+  30%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    box-shadow: 0px 0px 3px rgb(255, 255, 255), 0px 10px 30px rgb(255, 255, 255),
+      0px 10px 50px rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+  }
 }
